@@ -1,0 +1,13 @@
+body {
+    background-color:white;
+}
+
+form{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: initial;
+}
+h4 {
+text-align: center;
+}

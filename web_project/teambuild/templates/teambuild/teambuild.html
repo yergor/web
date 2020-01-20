@@ -1,0 +1,53 @@
+{% extends "main/wrapper.html" %}
+{% block content %}
+    
+    <div class="jumbotron">
+        <h1 class="display-4">Привет, мамин тимбилдэр!</h1>
+        <p class="lead">Дизайн кривой, потому что был заказан у Артемия Лебедева</p>
+        <hr class="my-4">
+        <p>Придется немного поработать с</p>
+        
+        <div class="container-fluid">
+            
+        <form>
+            <div class="form-group">
+              <label for="exampleFormControlInput1">Введите название проекта</label>
+              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Разработка приложения">
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlSelect1">Выберите количество людей</label>
+              <select class="form-control" id="exampleFormControlSelect1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlSelect2">Пора выбрать роли</label>
+                <select class="form-control" id="exampleFormControlSelect2">
+                  <option>Разработчик</option>
+                  <option>Тестировщик</option>
+                  <option>Инженер-электроник</option>
+                  <option>Архитектор</option>
+                  <option>Тот кто ходит за кофе</option>
+                </select>
+              </div><div class="form-group">
+                <label for="exampleFormControlSelect3">Пора выбрать роли</label>
+                <select class="form-control" id="exampleFormControlSelect3">
+                    <option>Разработчик</option>
+                    <option>Тестировщик</option>
+                    <option>Инженер-электроник</option>
+                    <option>Архитектор</option>
+                    <option>Тот кто ходит за кофе</option>
+                </select>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            
+        </div>
+    
+        </form>
+        
+      </div>
+      {% endblock %}
