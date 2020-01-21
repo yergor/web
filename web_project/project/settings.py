@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'crispy_forms',
     'accounts',
     'registration',
+    'profac',
+    'cheque',
 ]
 LOGIN_REDIRECT_URL =  '/'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
