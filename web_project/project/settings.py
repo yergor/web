@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'main',
     'crispy_forms',
     'accounts',
-    'teambuild',
     'registration',
 ]
 LOGIN_REDIRECT_URL =  '/'
