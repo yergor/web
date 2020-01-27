@@ -1,23 +1,17 @@
-from django.shortcuts import render
-from .forms import registrationForm
-from django.contrib.auth.forms import  AuthenticationForm
-from django.template import loader
-from django.template import RequestContext
-from django.http import HttpResponse
+from django.contrib.auth import login, authenticate
+from django.shortcuts import render, redirect
+from .forms import SignUpForm
 
-def custom_proc(request):
-    return{
-        'request': request,
-    }
-
-
-def registration(request):
-    form = registrationForm()
+def signup(request):
     if request.method == 'POST':
-        form = registrationForm(request.POST)   
+        form = SignUpForm(request.POST)
         if form.is_valid():
-            new_user = form.save()
-            return HttpResponseRedirect("main/home.html")
-    c =  {'form': form}   
-    return render(request, 'registration/registry.html', c)
-
+            form.save()
+            username = form.cleaned_data.get('username')
+            raw_password = form.cleaned_data.get('password1')
+            user = authenticate(username=username, password=raw_password)
+            login(request, user)
+            return render(request, 'main/home.html')
+    else:
+        form = SignUpForm()
+    return render(request, 'registration/login.html', {'form': form})
