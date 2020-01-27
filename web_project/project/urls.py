@@ -23,3 +23,4 @@ urlpatterns = [
     path('', include('registration.urls')),
     path('profile/', include('profac.urls'))
 ]
+
