@@ -1,0 +1,18 @@
+{% extends  'login/base.html' %}
+{% load crispy_forms_tags %}
+{% block main %}
+<div class="card signin">
+<div class="card-body">
+<h4 class="card-title">Вход</h4>
+
+<form method="post" class="signin">
+{% csrf_token %}
+<input type="hidden" name="signin" value="{{ signin }}">
+
+{{ form|crispy }}
+
+<button type="submit" class="btn btn-light btn-block">Продолжить!</button>
+</form>
+</div>
+</div>
+{% endblock %}
