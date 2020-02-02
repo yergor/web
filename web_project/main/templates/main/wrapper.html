@@ -30,7 +30,7 @@
                     <a class="nav-link" href="{% url 'cheque'%}">Чеки</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Рекомендации</a>
+                    <a class="nav-link" href="{% url 'rec'%}">Рекомендации</a>
                 </li>
             </ul>
             {% if not request.user.is_authenticated%}

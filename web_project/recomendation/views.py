@@ -3,7 +3,7 @@ from django.http import request
 from django.http import HttpResponseRedirect
 
 # Create your views here.
-def index(request):
+def rec(request):
     if not request.user.is_authenticated:
         return HttpResponseRedirect('/login/?next=%s' % request.path)
     else:
