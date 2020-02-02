@@ -7,5 +7,5 @@ def rec(request):
     if not request.user.is_authenticated:
         return HttpResponseRedirect('/login/?next=%s' % request.path)
     else:
-        return render(request, 'recomendation.html')
+        return render(request, 'recomendation/recomendation.html')
     
