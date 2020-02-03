@@ -1,0 +1,25 @@
+{% extends 'main/wrapper.html' %}
+
+{% block content %}
+
+
+<div class="container">{% for i in peopless %}
+
+    <div class="card-deck mb-3 text-center">
+      <div class="card mb-4 box-shadow">
+        <div class="card-header">
+          <h4 class="my-0 font-weight-normal">{{ i.title }}</h4>
+        </div>
+        <div class="card-body">
+          <h1 class="card-title pricing-card-title">Создатель: <small class="text-muted"> {{ i.author }}</small></h1>
+          <ul class="list-unstyled mt-3 mb-4">
+            <li>Стоимость: {{ i.chequeAmount }}</li>
+            <li>Дата покупки: {{ i.chequeDate }} человек(а)</li>
+            <li>Было куплено: {{ i.chequeThing }}</li>
+            <li>Где куплено: {{ i.shop }}</li>
+            <li>Дата добавления: {{ i.date }}</li>
+            <small class="text-muted">Дата создания: {{i.date}}</small>
+          </ul>
+        </div>
+      </div>
+      {% endblock %}

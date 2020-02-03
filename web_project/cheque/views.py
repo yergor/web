@@ -9,7 +9,8 @@ from django.utils import timezone
  
 from django.http import HttpResponseRedirect
 from .models import Post
-def post_new(request):
+
+def add_cheque(request):
     if not request.user.is_authenticated:
         return HttpResponseRedirect('/login/?next=%s' % request.path)
     else: 
@@ -20,8 +21,13 @@ def post_new(request):
                 post.author = request.user
                 post.date = timezone.now()
                 post.save()                
- 
-                return redirect('post_detail', pk=post.pk)
+                return redirect('all_cheques', pk=post.pk)
         else:
             form = PostForm()
             return render(request, 'cheque/cheque.html', {'form': form})
+def post_detail(request, pk):
+    post = get_object_or_404(Post, pk=pk)
+    return render(request, 'cheque/cheque_detail.html', {'post': post})
+def all_cheques(request):
+    peopless = Post.objects.all()
+    return render(request, 'cheque/all_cheques.html', locals())
