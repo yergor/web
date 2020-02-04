@@ -1,7 +1,7 @@
 {% extends "main/wrapper.html" %}
 {% load crispy_forms_tags %}
 
-{% block title %}Профиля аккаунта{% endblock %}
+{% block title %}Профиля аккаунта {{ request.user }}{% endblock %}
 {% block content %}
 <section id="profile" class="main">
         <div class="content dark style1 featured">
