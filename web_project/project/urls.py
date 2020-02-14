@@ -23,6 +23,6 @@ urlpatterns = [
     path('', include('registration.urls')),
     path('profile/', include('profac.urls')),
     path('', include('recomendation.urls')),
-    path('cheque/', include('cheque.urls'))
+    path('cheque/', include('cheque.urls')),
 ]
 

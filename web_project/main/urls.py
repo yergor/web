@@ -13,5 +13,6 @@ urlpatterns = [
     path('cheque/', add_cheque, name='cheque'),
     url('logout/', LogoutView.as_view(next_page='/'), name='logout'),
     url('signup/', signup, name='signup'),
-    url('rec/', rec, name='rec')
+    url('rec/', rec, name='rec'),
+    path('all_cheques/', all_cheques, name='all_cheques'),
 ]
