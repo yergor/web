@@ -12,4 +12,5 @@ class Post(models.Model):
     chequeThing = models.CharField(max_length=200, help_text='Товар*', verbose_name='Вещи которые вы купили?')
     shop = models.IntegerField(default=1, verbose_name='Магазин', help_text='Откуда вы купили товар?',) 
     date = models.DateTimeField(default=default_datetime, verbose_name='Дата добавления чека')
+    ref = models.CharField(max_length=200,default=default_datetime, verbose_name='Ссылка на покупателя')
 

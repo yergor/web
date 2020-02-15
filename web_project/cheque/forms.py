@@ -5,4 +5,4 @@ class PostForm(forms.ModelForm):
 
     class Meta:
         model = Post
-        fields = ('chequeAmount', 'chequeDate', 'chequeThing', 'shop')
+        fields = ('chequeAmount', 'chequeDate', 'chequeThing', 'shop', 'ref')
