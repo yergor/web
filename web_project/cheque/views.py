@@ -29,5 +29,5 @@ def cheque_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
     return render(request, 'cheque/cheque_datail.html', {'post': post})
 def all_cheques(request):
-    peopless = Post.objects.all()
+    peopless = Post.objects.order_by('-id')
     return render(request, 'cheque/all_cheques.html', locals())
