@@ -3,20 +3,20 @@
 {% block content %}
 <div class="container">
 
-    <div class="card-deck mb-3 text-center">
+    <div class="card-deck mb-3 text-center" class="cheque">
       <div class="card mb-4 box-shadow">
         <div class="card-header">
-          <h2 class="my-0 font-weight-normal">Все чеки</h2>
+          <h2 class="my-0 font-weight-normal">Ваш добавленный чек</h2>
         </div>
         <div class="card-body">
             <h1 class="card-title pricing-card-title">Создатель: <small class="text-muted"> {{ post.author }}</small></h1>
             <ul class="list-unstyled mt-3 mb-4">
-              <li>Стоимость: {{ post.chequeAmount }}</li>
-              <li>Дата покупки: {{ post.chequeDate }} человек(а)</li>
+              <li>Сумма покупки: {{ post.chequeAmount }}</li>
+              <li>Дата покупки: {{ post.chequeDate }} </li>
               <li>Было куплено: {{ post.chequeThing }}</li>
               <li>Где куплено: {{ post.shop }}</li>
+               <li>Ссылка на владельца чека: {{ post.ref }}</li>
               <li>Дата добавления: {{ post.date }}</li>
-              <li>Дата добавления: {{ post.ref }}</li>
             </ul>
         </div>
       </div>
