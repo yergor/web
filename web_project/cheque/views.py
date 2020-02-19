@@ -21,13 +21,15 @@ def add_cheque(request):
                 post.author = request.user
                 post.date = timezone.now()
                 post.save()                
-                return redirect('cheque_detail', pk=post.pk)
+                return redirect('cheque_datail')
         else:
             form = PostForm()
             return render(request, 'cheque/cheque.html', {'form': form})
-def cheque_detail(request, pk):
-    post = get_object_or_404(Post, pk=pk)
-    return render(request, 'cheque/cheque_datail.html', {'post': post})
+def cheque_datail(request):
+    peopless = Post.objects.filter(author=request.user)
+    return render(request, 'cheque/all_cheques.html', locals())
 def all_cheques(request):
     peopless = Post.objects.order_by('-id')
     return render(request, 'cheque/all_cheques.html', locals())
+
+    
