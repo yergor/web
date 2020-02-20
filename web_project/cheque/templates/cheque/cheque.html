@@ -3,15 +3,17 @@
 {% load crispy_forms_tags %}
  
 {% block content %}
-<divclass="container-fluid">
-<divclass="card">
-<divclass="card-body">
+<div width="750px"> 
+<div class="container-fluid">
+<div class="card">
+<div class="card-body">
 <h4class="card-title">Новый чек</h4>
 <form method="POST" novalidate>
     {% csrf_token %}
     {{ form|crispy }}
 <button type="submit"class="btn btn-success">Добавить</button>
 </form>
+</div>
 </div>
 </div>
 </div>

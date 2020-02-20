@@ -15,7 +15,7 @@
               <li>Дата покупки: {{ post.chequeDate }} </li>
               <li>Было куплено: {{ post.chequeThing }}</li>
               <li>Где куплено: {{ post.shop }}</li>
-               <li>Ссылка на владельца чека: {{ post.ref }}</li>
+              <li>Ссылка на владельца чека:<a href="{% url '{{ post.ref }}' %}"> {{ post.ref }}</a></li>
               <li>Дата добавления: {{ post.date }}</li>
             </ul>
         </div>
