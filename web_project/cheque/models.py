@@ -13,4 +13,5 @@ class Post(models.Model):
     shop = models.CharField(max_length=200, verbose_name='Магазин', help_text='Откуда вы купили товар?',) 
     date = models.DateTimeField(default=default_datetime, verbose_name='Дата добавления чека')
     ref = models.CharField(max_length=200, verbose_name='Ссылка на покупателя')
+    check = models.BooleanField(verbose_name='proverka', default=True)
 

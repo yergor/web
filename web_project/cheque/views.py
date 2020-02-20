@@ -26,7 +26,7 @@ def add_cheque(request):
             form = PostForm()
             return render(request, 'cheque/cheque.html', {'form': form})
 def cheque_datail(request):
-    peopless = Post.objects.filter(author=request.user)
+    peopless = Post.objects.order_by('-id').filter(author=request.user)
     return render(request, 'cheque/all_cheques.html', locals())
 def all_cheques(request):
     peopless = Post.objects.order_by('-id')

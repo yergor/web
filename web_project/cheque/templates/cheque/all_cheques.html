@@ -1,11 +1,10 @@
 {% extends 'main/wrapper.html' %}
 
 {% block content %}
-<div class="container mt-0">{% for i in peopless %}
-    <div class="card-deck mb-3 text-center">
+<div class="container mt-0">
+    <div class="card-deck mb-3 text-center" >
       <div class="card mb-4 box-shadow">
-        <div class="card-header">
-        </div>
+      {% for i in peopless %}
         <div class="card-body">
           <h1 class="card-title pricing-card-title mt-0">Создатель: <small class="text-muted"> {{ i.author }}</small></h1>
           <ul class="list-unstyled mt-3 mb-4">
@@ -14,6 +13,7 @@
             <li>Было куплено: {{ i.chequeThing }}</li>
             <li>Где куплено: {{ i.shop }}</li>
             <li>Ссылка на владельца чека: {{ i.ref }}</li>
+            <li>Актуально: {{i.check}}</li>
             <small class="text-muted">Дата создания: {{i.date}}</small>
           </ul>
         </div>
