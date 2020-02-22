@@ -12,7 +12,7 @@
             <li>Дата покупки: {{ i.chequeDate }}</li>
             <li>Было куплено: {{ i.chequeThing }}</li>
             <li>Где куплено: {{ i.shop }}</li>
-            <li>Ссылка на владельца чека: {{ i.ref }}</li>
+            <li>Ссылка на владельца чека: <a href="{{ i.ref }}">{{ i.ref }}</a></li>
             <li>Актуально: {{i.check}}</li>
             <small class="text-muted">Дата создания: {{i.date}}</small>
           </ul>
